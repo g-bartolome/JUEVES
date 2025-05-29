@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Clientes - Películas</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+  <h2>Gestión de Clientes - Películas</h2>
+
+  <form id="peliculaForm">
+    <label for="nombre">Nombre de la película:</label>
+    <input type="text" id="nombre" name="nombre">
+
+    <label for="genero">Género:</label>
+    <input type="text" id="genero" name="genero" onfocus="abrirGeneros()">
+
+    <div class="buttons">
+      <button type="button" onclick="mostrarPrimero()">Primero</button>
+      <button type="button" onclick="mostrarAnterior()">Anterior</button>
+      <button type="button" onclick="mostrarSiguiente()">Siguiente</button>
+      <button type="button" onclick="mostrarUltimo()">Último</button>
+    </div>
+  </form>
+
+  <script src="scripts.js"></script>
+  <script>
+    function abrirGeneros() {
+      window.open('generos.html', 'Seleccionar Género', 'width=400,height=300');
+    }
+  </script>
+
+</body>
+</html>

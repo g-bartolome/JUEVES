@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Seleccionar Género</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    select {
+      width: 300px;
+      padding: 5px;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    .buttons button {
+      margin-right: 10px;
+      padding: 8px 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Seleccionar Género</h2>
+
+  <form id="generoForm">
+    <label for="genero">Género:</label>
+    <select id="genero" name="genero" onchange="seleccionarGenero()">
+      <option value="drama">Drama</option>
+      <option value="comedia">Comedia</option>
+      <option value="accion">Acción</option>
+      <option value="romantico">Romántico</option>
+    </select>
+  </form>
+
+  <script>
+    function seleccionarGenero() {
+      var genero = document.getElementById("genero").value;
+      window.opener.document.getElementById("genero").value = genero;
+      window.close();
+    }
+  </script>
+
+</body>
+</html>
